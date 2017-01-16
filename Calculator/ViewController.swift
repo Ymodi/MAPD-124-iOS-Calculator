@@ -10,16 +10,75 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    
+    @IBOutlet weak var display: UILabel!
+
+    //remove 0 at the 1st 
+    var middleOfTypingANumber = false
+
+    @IBAction func appendDigit(_ sender: UIButton) {
+    /*  Optionals concept
+         What is the difference between ! and ?,
+         which one we should use where?
+    */
+        let digit = sender.currentTitle!
+        if middleOfTypingANumber {
+            display.text = display.text! + digit
+        }
+        else{
+            display.text = digit
+            middleOfTypingANumber = true
+        }
+        //print("digit = \(digit)")
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func operate(_ sender: UIButton) {
+        let operation = sender.currentTitle!
+        if middleOfTypingANumber{
+            enter()
+        }
+        switch operation{
+        case "×": performOperation { $0 * $1 }
+        case "÷": performOperation { $1 / $0 }
+        case "+": performOperation { $0 + $1 }
+        case "-": performOperation { $1 - $0 }
+//        case "√": performOperation { sqrt($0) }
+            default: break
+        }
     }
-
-
+    
+    func performOperation(operation:(Double, Double) -> Double){
+        if operandStack.count >= 2 {
+            displayValue = operation(operandStack.removeLast(), operandStack.removeLast())
+            enter()
+        }
+    }
+    
+//    func performOperation(operation: Double -> Double) {
+//        if operandStack.count >= 1 {
+//            displayValue = operation(operandStack.removeLast())
+//            enter()
+//        }
+//    }
+    
+    var operandStack: Array<Double> = Array<Double>()
+    
+    @IBAction func enter() {
+        middleOfTypingANumber = false
+        operandStack.append(displayValue)
+        print("operandStack = \(operandStack)")
+    }
+    
+    var displayValue: Double {
+        get{
+            return NumberFormatter().number(from:display.text!)!.doubleValue
+        }
+        set{
+            //Converting double to string using backslash parenthesis
+            display.text = "\(newValue)"
+            middleOfTypingANumber = false
+        }
+    }
+    
 }
 

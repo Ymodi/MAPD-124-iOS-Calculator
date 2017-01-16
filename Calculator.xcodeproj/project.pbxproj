@@ -35,6 +35,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53087B101E27D9CD0065D2BE /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				534F97A31E26F92900BD11AB /* Info.plist */,
+				534F97A01E26F92900BD11AB /* LaunchScreen.storyboard */,
+				534F979E1E26F92900BD11AB /* Assets.xcassets */,
+				534F97971E26F92900BD11AB /* AppDelegate.swift */,
+			);
+			name = "Supporting files";
+			sourceTree = "<group>";
+		};
 		534F978B1E26F92900BD11AB = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +65,9 @@
 		534F97961E26F92900BD11AB /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				534F97971E26F92900BD11AB /* AppDelegate.swift */,
+				53087B101E27D9CD0065D2BE /* Supporting files */,
 				534F97991E26F92900BD11AB /* ViewController.swift */,
 				534F979B1E26F92900BD11AB /* Main.storyboard */,
-				534F979E1E26F92900BD11AB /* Assets.xcassets */,
-				534F97A01E26F92900BD11AB /* LaunchScreen.storyboard */,
-				534F97A31E26F92900BD11AB /* Info.plist */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -267,6 +275,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "yeshamodi-300895482.Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -280,6 +289,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "yeshamodi-300895482.Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -302,6 +312,7 @@
 				534F97A81E26F92900BD11AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
