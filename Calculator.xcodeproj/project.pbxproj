@@ -104,7 +104,7 @@
 				TargetAttributes = {
 					534F97931E26F92900BD11AB = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 2BULHRS882;
+						DevelopmentTeam = KJ98848QS5;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -269,8 +269,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2BULHRS882;
+				DEVELOPMENT_TEAM = KJ98848QS5;
 				INFOPLIST_FILE = Calculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "yeshamodi-300895482.Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -283,8 +284,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2BULHRS882;
+				DEVELOPMENT_TEAM = KJ98848QS5;
 				INFOPLIST_FILE = Calculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "yeshamodi-300895482.Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
